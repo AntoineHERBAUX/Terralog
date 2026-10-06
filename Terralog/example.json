@@ -1,0 +1,317 @@
+{
+    {
+        "_id": "ObjectId('...')",
+        "identite": {
+            "nom_exploitation": "GAEC Les Champs Verts",
+            "statut_juridique": "GAEC",
+            "siret": "12345678900012",
+            "num_pac": "059123456" 
+        },
+        "localisation": {
+            "adresse_complete": "15 Route de la Ferme, 59173 Lynde",
+            "coordonnees_gps": {
+            "type": "Point",
+            "coordinates": [2.4214, 50.7289] 
+            }
+        },
+        "contact": {
+            "telephone_principal": "0601020304",
+            "email_contact": "contact@champsverts.fr"
+        },
+        "integrations_api": {
+            "telepac_cadastre": {
+            "actif": true,
+            "cle_api": "sk-cadastre-xxxxxx",
+            "derniere_synchro": "2026-10-01T08:00:00Z"
+            },
+            "service_meteo": {
+            "actif": true,
+            "fournisseur": "MeteoFrance",
+            "cle_api": "sk-meteo-xxxxxx",
+            "station_reference_id": "ST-59-124"
+            }
+        },
+        "metadonnees": {
+            "date_creation": "2026-10-04T23:46:00Z",
+            "statut": "actif"
+        }
+    }
+    {
+        {
+            "_id": "ObjectId('...')",
+            "ferme_id": "ObjectId('...')",
+            "profil": {
+                "prenom": "Antoine",
+                "nom": "Herbaux",
+                "email": "antoine@terralog.fr",
+                "telephone": "+33600112233"
+            },
+            "acces": {
+                "mot_de_passe_hash": "$2b$12$KIX...",
+                "role_principal": "administrateur",
+                "statut_compte": "actif",
+                "derniere_connexion": "2026-10-04T23:50:00Z"
+            },
+            "permissions_specifiques": {
+                "peut_valider_interventions_elevage": true,
+                "peut_valider_interventions_culture": true,
+                "acces_financier": true,
+                "gestion_materiel": true,
+                "export_donnees": true
+            },
+            "preferences": {
+                "notifications_push": true,
+                "alertes_sms_urgences": true,
+                "theme_interface": "sombre"
+            },
+            "metadonnees": {
+                "date_creation": "2026-10-01T14:30:00Z"
+            }
+            }
+    }
+    {
+        "_id": "ObjectId('...')",
+        "ferme_id": "ObjectId('...')",
+        "identification": {
+            "numero_boucle": "4442",
+            "numero_national_complet": "FR59123454442",
+            "nom_usuel": "Marguerite",
+            "espece": "bovin",
+            "race": "Prim'Holstein",
+            "sexe": "femelle"
+        },
+        "genealogie": {
+            "mere": "1298",
+            "pere": "FR1234567890 (Taureau Jumper)"
+        },
+        "cycle_de_vie": {
+            "statut": "vivant",
+            "date_entree": "2023-04-12T00:00:00Z",
+            "motif_entree": "naissance",
+            "date_sortie": null,
+            "motif_sortie": null,
+            "destination_sortie": null
+        },
+        "physiologie_actuelle": {
+            "statut_reproduction": "gestante",
+            "stade_lactation": "en_production",
+            "poids_actuel_kg": 650,
+            "date_derniere_pesee": "2026-09-15T10:00:00Z"
+        },
+        "fiche_sanitaire_resume": {
+            "statut_global": "en_traitement",
+            "delai_attente_lait_viande": "2026-10-14T00:00:00Z",
+            
+            // NOUVEAU : Le carnet de bord chronologique complet
+            "historique_evenements": [
+            {
+                "date_evenement": "2023-04-12T08:30:00Z",
+                "categorie": "elevage_naissance",
+                "action": "naissance",
+                "description": "Née sur l'exploitation (Mère: 1298)",
+                "intervention_id": null 
+            },
+            {
+                "date_evenement": "2026-09-15T10:00:00Z",
+                "categorie": "elevage_intervention",
+                "action": "encornage",
+                "intervention_id": "ObjectId('651a2b...')"
+            },
+            {
+                "date_evenement": "2026-10-04T22:07:00Z",
+                "categorie": "elevage_intervention",
+                "action": "soin_sanitaire",
+                "produit_ou_medicament": "traitement antimammite",
+                "intervenant": "Antoine",
+                "intervention_id": "ObjectId('651a2c...')"
+            }
+            ]
+        "metadonnees": {
+            "date_creation": "2023-04-12T08:30:00Z",
+            "derniere_mise_a_jour": "2026-10-04T22:08:00Z"
+        }
+    }
+
+    {
+    "_id": "ObjectId('...')",
+    "ferme_id": "ObjectId('...')",
+    "identification": {
+        "nom_usuel": "Le Grand Champ",
+        "surface_hectares": 12.5,
+        "type_sol": "limono-argileux",
+        "references_cadastrales": [
+        {"section": "ZK", "numero": "45"},
+        {"section": "ZK", "numero": "46"}
+        ]
+    },
+    "geometrie": {
+        "type": "Polygon",
+        "coordinates": [
+        [
+            [2.4214, 50.7289],
+            [2.4250, 50.7295],
+            [2.4245, 50.7310],
+            [2.4200, 50.7305],
+            [2.4214, 50.7289] 
+        ]
+        ]
+    },
+    "agronomie_actuelle": {
+        "campagne_agricole": "2026-2027",
+        "culture_principale": "blé tendre",
+        "variete": "Chevignon",
+        "date_semis": "2026-10-04T09:00:00Z",
+        "statut": "en_croissance"
+    },
+    "historique_interventions": [
+        {
+        "date_evenement": "2026-09-20T14:00:00Z",
+        "categorie": "culture",
+        "action": "labour",
+        "description": "Labour d'hiver",
+        "intervention_id": "ObjectId('651a3d...')"
+        },
+        {
+        "date_evenement": "2026-10-04T09:53:00Z",
+        "categorie": "culture",
+        "action": "semis",
+        "description": "Semis blé 400 kg/ha",
+        "intervention_id": "ObjectId('651a3f...')"
+        }
+    ],
+    "metadonnees": {
+        "statut_exploitation": "actif",
+        "date_creation": "2025-10-01T10:00:00Z",
+        "derniere_mise_a_jour": "2026-10-04T10:00:00Z"
+        }
+    }
+
+    {
+        "_id": "ObjectId('...')",
+        "ferme_id": "ObjectId('...')", 
+        "identification": {
+            "nom_commercial": "Ammonitrate 33",
+            "type_intrant": "engrais", 
+            "fabricant": "Yara",
+            "composition_active": "33,5% Azote (N)"
+        },
+        "reglementation_et_securite": {
+            "numero_homologation": "AMM-Non-Applicable",
+            "classe_danger": "comburant",
+            "delai_avant_recolte_jours": null,
+            "delai_reentree_heures": null,
+            "carence_lait_jours": null,
+            "carence_viande_jours": null,
+            "znt_metres": null 
+        },
+        "recommandations_usage": {
+            "dose_standard": 300,
+            "unite_dose_standard": "kg/ha",
+            "cultures_ou_animaux_cibles": ["blé tendre", "orge", "colza", "maïs"]
+        },
+        "conditionnement": {
+            "type_emballage": "Big Bag",
+            "contenance": 600,
+            "unite_contenance": "kg"
+        },
+        "metadonnees": {
+            "statut": "actif",
+            "date_ajout": "2026-10-05T00:15:00Z"
+        }
+    }
+
+    {
+        "_id": "ObjectId('...')",
+        "ferme_id": "ObjectId('...')",
+        "identification": {
+            "nom_usuel": "Tracteur John Deere 6155R",
+            "categorie_equipement": "vehicule_moteur", 
+            "marque": "John Deere",
+            "modele": "6155R",
+            "immatriculation_ou_serie": "AB-123-CD",
+            "annee_mise_en_service": 2018
+        },
+        "caracteristiques_techniques": {
+            "puissance_cv": 155,
+            "capacite_stockage": null,
+            "unite_stockage": null,
+            "localisation_fixe": null 
+        },
+        "etat_actuel": {
+            "statut_operationnel": "operationnel",
+            "compteur_usage": 4520,
+            "unite_compteur": "heures",
+            "date_releve_compteur": "2026-10-04T18:00:00Z"
+        },
+        "maintenance_et_conformite": {
+            "date_dernier_entretien": "2026-05-12T00:00:00Z",
+            "prochain_entretien_cible": 5000, 
+            "unite_cible": "heures",
+            "date_prochain_controle_obligatoire": null 
+        },
+        "historique_interventions": [
+            {
+            "date_evenement": "2026-05-12T14:00:00Z",
+            "categorie": "materiel",
+            "action": "entretien_regulier",
+            "description": "Vidange complète et filtres",
+            "intervention_id": "ObjectId('651a4e...')"
+            },
+            {
+            "date_evenement": "2026-10-04T08:30:00Z",
+            "categorie": "materiel",
+            "action": "panne",
+            "description": "Fuite hydraulique relevage arrière",
+            "intervention_id": "ObjectId('651a5f...')"
+            }
+        ],
+        "metadonnees": {
+            "statut_possession": "en_propriete",
+            "date_creation": "2025-10-01T10:00:00Z"
+        }
+    }
+
+    {
+        "_id": "ObjectId('651a3f...')",
+        "ferme_id": "ObjectId('...')",
+        "auteur": {
+            "utilisateur_id": "ObjectId('...')",
+            "nom": "Antoine Herbaux" 
+        },
+        "horodatage": {
+            "date_enregistrement": "2026-10-05T00:31:00Z",
+            "date_action_calculee": "2026-10-04T09:53:00Z" 
+        },
+        "contexte_metier": {
+            "categorie_ia": "culture", 
+            "action_realisee": "semis"
+        },
+        "cibles": [
+            {
+            "type_cible": "parcelle", 
+            "reference_id": "ObjectId('...')", 
+            "valeur_textuelle": "Le Grand Champ"
+            }
+        ],
+        "intrants_utilises": [
+            {
+            "intrant_id": "ObjectId('...')",
+            "valeur_textuelle": "blé",
+            "dose_hectare_appliquee": 400,
+            "unite_dose": "kg/ha"
+            }
+        ],
+        "donnees_ia_brutes": {
+            "phrase_brute": "J'ai fait un semis de blé sur le Grand Champ à 400 kilos hectare hier matin",
+            "fichier_audio_lie": "voix_20261005_003100.webm",
+            "trace_debug_id": "ObjectId('...')",
+            "modele_utilise": "llama3.1:8b"
+        },
+        "statut_validation": {
+            "etat": "complet", 
+            "mode_validation": "automatique_python"
+        }
+    }
+
+}
+

@@ -1,0 +1,5 @@
+{"id": 6, "tours": ["Le véto a fait une antivamite sur la 30-87."],
+ "categorie": "elevage_intervention",
+ "attendu": {"numero_boucle": "3087", "type_intervention": "soin_sanitaire",
+             "produit_ou_materiel": "anti-mammite", "intervenant": "vétérinaire",
+             "dosage_ou_mesure": null, "expression_date": null}}
